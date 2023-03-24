@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 
+import java.util.List;
 import java.util.UUID;
 
 @Data
@@ -27,5 +28,6 @@ public class DogWalkerDTO {
     @Positive
     @Max(value = 100, message = "Age should not be greater than 100")
     private Integer age;
+    private List<DogDTO> dogsGroup;
 
 }

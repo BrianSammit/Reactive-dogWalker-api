@@ -1,5 +1,6 @@
 package com.brian.springreactivedogwalker.domain.collection;
 
+import com.brian.springreactivedogwalker.domain.DTO.DogDTO;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -9,6 +10,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
 import java.util.UUID;
 
 @Data
@@ -27,4 +29,6 @@ public class DogWalker {
     @Positive
     @Max(value = 100, message = "Age should not be greater than 100")
     private Integer age;
+
+    private List<DogDTO> dogsGroup;
 }
