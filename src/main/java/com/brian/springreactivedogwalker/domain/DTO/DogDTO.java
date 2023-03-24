@@ -11,5 +11,4 @@ public class DogDTO {
     private String breed;
     private Integer age;
     private String color;
-    private Boolean isAdded;
 }

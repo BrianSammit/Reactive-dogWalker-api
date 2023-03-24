@@ -18,7 +18,8 @@ public class WalkerConsumer {
     @RabbitListener(queues = RabbitMQConfig.DOG_QUEUE)
     public void consume(String message) throws JsonProcessingException {
         DogEvent event = objectMapper.readValue(message, DogEvent.class);
-        if (event.getEventType().equals("DogAdded"))
-            addDogToWalkerUseCase.addToWalker(event.getWlkId(), event.getDogToAdd());
+        if (event.getEventType().equals("DogAdded")){
+            addDogToWalkerUseCase.addToWalker(event.getDogWlkId(), event.getDogToAdd());
+        }
     }
 }

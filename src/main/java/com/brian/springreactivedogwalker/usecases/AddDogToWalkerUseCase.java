@@ -19,7 +19,7 @@ public class AddDogToWalkerUseCase implements AddDogToWalker {
     public void addToWalker(String wlkId, DogDTO dogDTO) {
         dogWalkerRepository
                 .findById(wlkId)
-                .switchIfEmpty(Mono.error(new RuntimeException("Walker not found for id " + wlkId)))
+                .switchIfEmpty(Mono.error(new RuntimeException("Walker not found by id " + wlkId)))
                 .flatMap(dogWalker -> {
                     var dogInGroup = dogWalker.getDogsGroup();
                     dogInGroup.add(dogDTO);
