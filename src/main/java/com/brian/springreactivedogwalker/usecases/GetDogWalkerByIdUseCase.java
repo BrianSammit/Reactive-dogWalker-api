@@ -11,7 +11,7 @@ import java.util.function.Function;
 
 @Service
 @AllArgsConstructor
-public class GetDogWarkerByIdUseCase implements Function<String, Mono<DogWalkerDTO>> {
+public class GetDogWalkerByIdUseCase implements Function<String, Mono<DogWalkerDTO>> {
     private final IDogWalkerRepository dogWalkerRepository;
 
     private final ModelMapper mapper;

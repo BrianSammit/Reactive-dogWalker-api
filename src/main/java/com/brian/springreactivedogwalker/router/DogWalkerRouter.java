@@ -39,7 +39,7 @@ public class DogWalkerRouter {
     }
 
     @Bean
-    public RouterFunction<ServerResponse> getDogsWalkerById(GetDogWarkerByIdUseCase getDogWarkerByIdUseCase) {
+    public RouterFunction<ServerResponse> getDogsWalkerById(GetDogWalkerByIdUseCase getDogWarkerByIdUseCase) {
         return route(GET("/dogWalker/{id}"),
                 request -> getDogWarkerByIdUseCase.apply(request.pathVariable("id"))
                         .flatMap(dogWalkerDTO -> ServerResponse.ok()
