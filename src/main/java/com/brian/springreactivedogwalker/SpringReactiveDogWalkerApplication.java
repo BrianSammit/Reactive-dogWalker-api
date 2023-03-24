@@ -1,4 +1,4 @@
-package com.brian.springreactivedogWalker;
+package com.brian.springreactivedogwalker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

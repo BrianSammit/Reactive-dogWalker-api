@@ -1,4 +1,4 @@
-package com.brian.springreactivedogWalker;
+package com.brian.springreactivedogwalker;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
